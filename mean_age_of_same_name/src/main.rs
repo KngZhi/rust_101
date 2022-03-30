@@ -64,7 +64,7 @@ fn main() {
     let result = aggregate_person_with_ages(persons);
     // find mean value of each Person.name and write to files
     for person in result {
-        println!("({}, {})", person.0, person.1);
+        println!("({},{})", person.0, person.1);
     }
 
     // println!("With text:\n{}", contents);
