@@ -1,20 +1,19 @@
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
+// 填空并修复错误
 fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
+    let s = String::from("hello, 世界");
+    let slice1 = s[0]; //提示: `h` 在 UTF-8 编码中只占用 1 个字节
+    assert_eq!(slice1, "h");
 
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
-} 
-
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
+    let slice2 = &s[3..5];// 提示: `中` 在 UTF-8 编码中占用 3 个字节
+    assert_eq!(slice2, "世");
+    
+    // 迭代 s 中的所有字符
+    for (i, c) in s.__ {
+        if i == 7 {
+            assert_eq!(c, '世')
+        }
     }
+
+    println!("Success!")
 }

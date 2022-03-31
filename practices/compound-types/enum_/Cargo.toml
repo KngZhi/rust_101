@@ -1,5 +1,5 @@
 [package]
-name = "./compound-types/enum_"
+name = "enum_"
 version = "0.1.0"
 edition = "2021"
 

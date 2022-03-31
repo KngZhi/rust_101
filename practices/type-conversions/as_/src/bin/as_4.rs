@@ -1,20 +1,17 @@
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
+// 填空
 fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
-
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
-} 
-
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
+    let mut values: [i32; 2] = [1, 2];
+    let p1: *mut i32 = values.as_mut_ptr();
+    let first_address: usize = p1 __; 
+    let second_address = first_address + 4; // 4 == std::mem::size_of::<i32>()
+    let p2: *mut i32 = second_address __; // p2 指向 values 数组中的第二个元素
+    unsafe {
+        // 将第二个元素加 1
+        __
     }
+    
+    assert_eq!(values[1], 3);
+
+    println!("Success!")
 }

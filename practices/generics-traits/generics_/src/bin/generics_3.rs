@@ -1,24 +1,8 @@
 
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
+// 实现一个结构体 Point 让代码工作
+
 
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
-
-    for msg in msgs {
-        show_message(msg)
-    }
-} 
-
-fn show_message(msg: Message) {
-    println!("{}", msg);
+    let integer = Point { x: 5, y: 10 };
+    let float = Point { x: 1.0, y: 4.0 };
 }

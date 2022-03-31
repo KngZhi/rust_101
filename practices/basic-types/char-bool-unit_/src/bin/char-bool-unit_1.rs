@@ -1,13 +1,11 @@
 
-// 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+use std::mem::size_of_val;
 fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
+    let c1 = 'a';
+    assert_eq!(size_of_val(&c1),1); 
+
+    let c2 = '中';
+    assert_eq!(size_of_val(&c2),3); 
+
+    println!("Success!")
 } 

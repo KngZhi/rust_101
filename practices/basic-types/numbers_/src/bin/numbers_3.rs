@@ -1,24 +1,11 @@
 
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+//  修改 `assert_eq!` 让代码工作
+fn main() {
+    let x = 5;
+    assert_eq!("u32".to_string(), type_of(&x));
 }
 
-fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
-
-    for msg in msgs {
-        show_message(msg)
-    }
-} 
-
-fn show_message(msg: Message) {
-    println!("{}", msg);
+// 以下函数可以获取传入参数的类型，并返回类型的字符串形式，例如  "i8", "u8", "i32", "u32"
+fn type_of<T>(_: &T) -> String {
+    format!("{}", std::any::type_name::<T>())
 }

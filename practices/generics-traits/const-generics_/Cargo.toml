@@ -1,5 +1,5 @@
 [package]
-name = "./generics-traits/const-generics_"
+name = "const-generics_"
 version = "0.1.0"
 edition = "2021"
 

@@ -1,24 +1,18 @@
 
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
+// 问题:  我们的代码中发生了多少次堆内存分配？
+// 你的回答: 
+fn main() {  
+    // 基于 `&str` 类型创建一个 String,
+    // 字符串字面量的类型是 `&str`
+   let s: String = String::from("hello, world!");
 
-fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
+   // 创建一个切片引用指向 String `s`
+   let slice: &str = &s;
 
-    for msg in msgs {
-        show_message(msg)
-    }
-} 
+   // 基于刚创建的切片来创建一个 String
+   let s: String = slice.to_string();
 
-fn show_message(msg: Message) {
-    println!("{}", msg);
+   assert_eq!(s, "hello, world!");
+
+   println!("Success!")
 }

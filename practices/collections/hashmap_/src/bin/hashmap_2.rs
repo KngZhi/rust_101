@@ -1,18 +1,22 @@
 
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+use std::collections::HashMap;
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
+    let teams = [
+        ("Chinese Team", 100),
+        ("American Team", 10),
+        ("France Team", 50),
+    ];
 
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
+    let mut teams_map1 = HashMap::new();
+    for team in &teams {
+        teams_map1.insert(team.0, team.1);
     }
-} 
+
+    // 使用两种方法实现 team_map2
+    // 提示:其中一种方法是使用 `collect` 方法
+    let teams_map2...
+
+    assert_eq!(teams_map1, teams_map2);
+
+    println!("Success!")
+}

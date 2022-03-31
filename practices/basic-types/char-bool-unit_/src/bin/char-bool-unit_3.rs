@@ -1,24 +1,10 @@
 
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// make  println! work
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
+    let _f: bool = false;
 
-    for msg in msgs {
-        show_message(msg)
+    let t = true;
+    if !t {
+        println!("Success!")
     }
 } 
-
-fn show_message(msg: Message) {
-    println!("{}", msg);
-}

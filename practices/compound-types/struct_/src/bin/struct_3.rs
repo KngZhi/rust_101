@@ -1,24 +1,14 @@
-
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// 填空并修复错误
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
+    let v = Color(0, 127, 255);
+    check_color(v);
+}   
 
-    for msg in msgs {
-        show_message(msg)
-    }
-} 
-
-fn show_message(msg: Message) {
-    println!("{}", msg);
-}
+fn check_color(p: Color) {
+    let Color(x, _, z) = p;
+    assert_eq!(x, 0);
+    assert_eq!(p.1, 127);
+    assert_eq!(z, 255);
+ }

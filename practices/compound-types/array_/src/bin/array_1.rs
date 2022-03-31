@@ -1,13 +1,8 @@
 
-// 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
 fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
-} 
+    // 使用合适的类型填空
+    let arr: __ = [1, 2, 3, 4, 5];
+
+    // 修改以下代码，让它顺利运行
+    assert!(arr.len() == 4);
+}

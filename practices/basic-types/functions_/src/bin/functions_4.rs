@@ -1,20 +1,23 @@
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
 fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
+    println!("Success!");
+}
 
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
-} 
+fn get_option(tp: u8) -> Option<i32> {
+    match tp {
+        1 => {
+            // TODO
+        }
+        _ => {
+            // TODO
+        }
+    };
+    
+    // 这里与其返回一个 None，不如使用发散函数替代
+    never_return_fn()
+}
 
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
-    }
+// 使用三种方法实现以下发散函数
+fn never_return_fn() -> ! {
+    
 }

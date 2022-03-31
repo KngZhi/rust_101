@@ -1,24 +1,20 @@
-
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+// 只填空，不要删除任何代码行!
+#[derive(Debug)]
+struct TrafficLight {
+    color: String,
 }
 
-fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
-
-    for msg in msgs {
-        show_message(msg)
+impl TrafficLight {
+    pub fn show_state(__)  {
+        println!("the current state is {}", __.color);
     }
-} 
-
-fn show_message(msg: Message) {
-    println!("{}", msg);
+}
+fn main() {
+    let light = TrafficLight{
+        color: "red".to_owned(),
+    };
+    // 不要拿走 `light` 的所有权
+    light.show_state();
+    // 否则下面代码会报错
+    println!("{:?}", light);
 }

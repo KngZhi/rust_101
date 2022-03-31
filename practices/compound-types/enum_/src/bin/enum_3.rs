@@ -1,5 +1,5 @@
 
-// 填空，并修复错误
+// 仅填空并修复错误
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -8,17 +8,11 @@ enum Message {
 }
 
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
+    let msg = Message::Move{x: 1, y: 2};
 
-    for msg in msgs {
-        show_message(msg)
+    if let Message::Move{__} = msg {
+        assert_eq!(a, b);
+    } else {
+        panic!("不要让这行代码运行！");
     }
 } 
-
-fn show_message(msg: Message) {
-    println!("{}", msg);
-}

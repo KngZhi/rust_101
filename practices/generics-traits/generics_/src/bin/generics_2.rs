@@ -1,18 +1,9 @@
 
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
+// 实现下面的泛型函数 sum
+fn sum
 
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
-
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
-} 
+    assert_eq!(5, sum(2i8, 3i8));
+    assert_eq!(50, sum(20, 30));
+    assert_eq!(2.46, sum(1.23, 1.23));
+}

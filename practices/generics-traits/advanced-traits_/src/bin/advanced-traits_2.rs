@@ -1,18 +1,27 @@
 
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+use std::ops::Sub;
+
+#[derive(Debug, PartialEq)]
+struct Point<T> {
+    x: T,
+    y: T,
+}
+
+// 用三种方法填空: 其中两种使用默认的泛型参数，另外一种不使用
+impl __ {
+    type Output = Self;
+
+    fn sub(self, other: Self) -> Self::Output {
+        Point {
+            x: self.x - other.x,
+            y: self.y - other.y,
+        }
+    }
 }
 
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
+    assert_eq!(Point { x: 2, y: 3 } - Point { x: 1, y: 0 },
+        Point { x: 1, y: 3 });
 
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
-} 
+    println!("Success!")
+}

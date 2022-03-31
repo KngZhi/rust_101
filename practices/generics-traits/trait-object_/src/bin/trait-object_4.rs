@@ -1,20 +1,28 @@
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
+trait Foo {
+    fn method(&self) -> String;
+}
+
+impl Foo for u8 {
+    fn method(&self) -> String { format!("u8: {}", *self) }
+}
+
+impl Foo for String {
+    fn method(&self) -> String { format!("string: {}", *self) }
+}
+
+// 通过泛型实现以下函数
+fn static_dispatch...
+
+// 通过特征对象实现以下函数
+fn dynamic_dispatch...
+
 fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
+    let x = 5u8;
+    let y = "Hello".to_string();
 
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
-} 
+    static_dispatch(x);
+    dynamic_dispatch(&y);
 
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
-    }
+    println!("Success!")
 }

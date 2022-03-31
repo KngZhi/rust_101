@@ -1,5 +1,5 @@
 [package]
-name = "./generics-traits/trait-object_"
+name = "trait-object_"
 version = "0.1.0"
 edition = "2021"
 

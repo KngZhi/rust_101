@@ -1,5 +1,5 @@
 [package]
-name = "./compound-types/struct_"
+name = "struct_"
 version = "0.1.0"
 edition = "2021"
 

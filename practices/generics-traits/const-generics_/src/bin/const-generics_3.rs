@@ -1,24 +1,19 @@
 
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+// 修复错误
+struct Array<T, const N: usize> {
+    data : [T; N]
 }
 
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
+    let arrays = [
+        Array{
+            data: [1, 2, 3],
+        },
+        Array {
+            data: [1.0, 2.0, 3.0],
+        },
+        Array {
+            data: [1, 2]
+        }
     ];
-
-    for msg in msgs {
-        show_message(msg)
-    }
-} 
-
-fn show_message(msg: Message) {
-    println!("{}", msg);
 }

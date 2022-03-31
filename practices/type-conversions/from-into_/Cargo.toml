@@ -1,5 +1,5 @@
 [package]
-name = "./type-conversions/from-into_"
+name = "from-into_"
 version = "0.1.0"
 edition = "2021"
 

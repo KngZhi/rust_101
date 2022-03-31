@@ -1,13 +1,8 @@
 
-// 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
 fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
-} 
+    let _t0: (u8,i16) = (0, -1);
+    // 元组的成员还可以是一个元组
+    let _t1: (u8, (i16, u32)) = (0, (-1, 1));
+    // 填空让代码工作
+    let t: (u8, __, i64, __, __) = (1u8, 2u16, 3i64, "hello", String::from(", world"));
+}

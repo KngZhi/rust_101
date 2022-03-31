@@ -1,24 +1,29 @@
 
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+use std::fs;
+use std::io;
+use std::num;
+
+enum CliError {
+    IoError(io::Error),
+    ParseError(num::ParseIntError),
+}
+
+impl From<io::Error> for CliError {
+    // 实现 from 方法
+}
+
+impl From<num::ParseIntError> for CliError {
+    // 实现 from 方法
+}
+
+fn open_and_parse_file(file_name: &str) -> Result<i32, CliError> {
+    // ? 自动将 io::Error 转换成 CliError
+    let contents = fs::read_to_string(&file_name)?;
+    // num::ParseIntError -> CliError
+    let num: i32 = contents.trim().parse()?;
+    Ok(num)
 }
 
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
-
-    for msg in msgs {
-        show_message(msg)
-    }
-} 
-
-fn show_message(msg: Message) {
-    println!("{}", msg);
+    println!("Success!")
 }

@@ -1,13 +1,8 @@
 
-// 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// 修复代码中的错误，不要新增代码行!
 fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
-} 
+    let arr = [1, 2, 3];
+    let s1: [i32] = arr[0..2];
+
+    let s2: str = "hello, world" as str;
+}

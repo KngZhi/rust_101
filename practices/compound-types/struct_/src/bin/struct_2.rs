@@ -1,18 +1,16 @@
 
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+struct Unit;
+trait SomeTrait {
+    // ...定义一些行为
 }
 
+// 我们并不关心结构体中有什么数据( 字段 )，但我们关心它的行为。
+// 因此这里我们使用没有任何字段的单元结构体，然后为它实现一些行为
+impl SomeTrait for Unit {  }
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
-
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
+    let u = Unit;
+    do_something_with_unit(u);
 } 
+
+// 填空，让代码工作
+fn do_something_with_unit(u: Unit) {   }

@@ -1,20 +1,24 @@
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
-fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
+// 填空，并修复错误
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
 
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
+fn main() {
+    let msgs: __ = [
+        Message::Quit,
+        Message::Move{x:1, y:3},
+        Message::ChangeColor(255,255,0)
+    ];
+
+    for msg in msgs {
+        show_message(msg)
+    }
 } 
 
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
-    }
+fn show_message(msg: Message) {
+    println!("{}", msg);
 }

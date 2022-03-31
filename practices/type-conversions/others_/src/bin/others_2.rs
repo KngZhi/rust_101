@@ -1,18 +1,11 @@
-
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// 为了使用 `from_str` 方法, 你需要引入该特征到当前作用域中
+use std::str::FromStr;
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
+    let parsed: i32 = "5".__.unwrap();
+    let turbo_parsed = "10".__.unwrap();
+    let from_str = __.unwrap();
+    let sum = parsed + turbo_parsed + from_str;
+    assert_eq!(sum, 35);
 
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
-} 
+    println!("Success!")
+}

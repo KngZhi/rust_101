@@ -1,13 +1,14 @@
-
-// 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// 修复错误，填空
+// 不要移除任何代码
 fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
-} 
+    let decimal = 97.123_f32;
+
+    let integer: __ = decimal as u8;
+
+    let c1: char = decimal as char;
+    let c2 = integer as char;
+
+    assert_eq!(integer, 'b' as u8);
+
+    println!("Success!")
+}

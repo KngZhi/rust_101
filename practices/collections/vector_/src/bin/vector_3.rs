@@ -1,24 +1,32 @@
 
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// 填空
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
+    // array -> Vec
+    // impl From<[T; N]> for Vec
+    let arr = [1, 2, 3];
+    let v1 = __(arr);
+    let v2: Vec<i32> = arr.__();
+ 
+    assert_eq!(v1, v2);
+ 
+    
+    // String -> Vec
+    // impl From<String> for Vec
+    let s = "hello".to_string();
+    let v1: Vec<u8> = s.__();
 
-    for msg in msgs {
-        show_message(msg)
-    }
-} 
+    let s = "hello".to_string();
+    let v2 = s.into_bytes();
+    assert_eq!(v1, v2);
 
-fn show_message(msg: Message) {
-    println!("{}", msg);
-}
+    // impl<'_> From<&'_ str> for Vec
+    let s = "hello";
+    let v3 = Vec::__(s);
+    assert_eq!(v2, v3);
+
+    // 迭代器 Iterators 可以通过 collect 变成 Vec
+    let v4: Vec<i32> = [0; 10].into_iter().collect();
+    assert_eq!(v4, vec![0; 10]);
+
+    println!("Success!")
+ }

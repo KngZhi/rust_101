@@ -1,5 +1,5 @@
 
-// 填空，并修复错误
+// 填空
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -8,7 +8,7 @@ enum Message {
 }
 
 fn main() {
-    let msgs: __ = [
+    let msgs = [
         Message::Quit,
         Message::Move{x:1, y:3},
         Message::ChangeColor(255,255,0)
@@ -20,5 +20,15 @@ fn main() {
 } 
 
 fn show_message(msg: Message) {
-    println!("{}", msg);
+    match msg {
+        __ => { // 这里匹配 Message::Move
+            assert_eq!(a, 1);
+            assert_eq!(b, 3);
+        },
+        Message::ChangeColor(_, g, b) => {
+            assert_eq!(g, __);
+            assert_eq!(b, __);
+        }
+        __ => println!("no data in these variants")
+    }
 }

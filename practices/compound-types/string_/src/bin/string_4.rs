@@ -1,20 +1,10 @@
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
+// 修复所有错误，并且不要新增代码行
 fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
+    let  s =  String::from("hello");
+    s.push(',');
+    s.push(" world");
+    s += "!".to_string();
 
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
-} 
-
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
-    }
+    println!("{}", s)
 }

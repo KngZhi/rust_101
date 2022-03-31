@@ -1,13 +1,15 @@
 
-// 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+// fix the error
+struct Person {
+    name: String,
+    age: u8,
+    hobby: String
 }
-
 fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
+    let age = 30;
+    let p = Person {
+        name: String::from("sunface"),
+        age,
+        hobby: String::from("coding"),
+    };
 } 

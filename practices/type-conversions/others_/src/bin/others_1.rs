@@ -1,13 +1,19 @@
+use std::fmt;
 
-// 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+impl fmt::Display for Point {
+    // 实现 fmt 方法
 }
 
 fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
-} 
+    let origin = Point { x: 0, y: 0 };
+    // 填空
+    assert_eq!(origin.__, "The point is (0, 0)");
+    assert_eq!(format!(__), "The point is (0, 0)");
+
+    println!("Success!")
+}

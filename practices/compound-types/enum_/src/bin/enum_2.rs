@@ -1,5 +1,5 @@
 
-// 仅填空并修复错误
+// 填空
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -8,11 +8,6 @@ enum Message {
 }
 
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
-
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
+    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
+    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
 } 

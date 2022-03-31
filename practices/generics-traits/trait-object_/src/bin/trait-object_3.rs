@@ -1,24 +1,38 @@
 
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+// 填空
+trait Draw {
+    fn draw(&self) -> String;
+}
+
+impl Draw for u8 {
+    fn draw(&self) -> String {
+        format!("u8: {}", *self)
+    }
+}
+
+impl Draw for f64 {
+    fn draw(&self) -> String {
+        format!("f64: {}", *self)
+    }
 }
 
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
+    let x = 1.1f64;
+    let y = 8u8;
 
-    for msg in msgs {
-        show_message(msg)
-    }
-} 
+    // draw x
+    draw_with_box(__);
 
-fn show_message(msg: Message) {
-    println!("{}", msg);
+    // draw y
+    draw_with_ref(&y);
+
+    println!("Success!")
+}
+
+fn draw_with_box(x: Box<dyn Draw>) {
+    x.draw();
+}
+
+fn draw_with_ref(x: __) {
+    x.draw();
 }

@@ -1,13 +1,10 @@
 
-// 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// 移除某个部分让代码工作
 fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
-} 
+    let x: i32 = 5;
+    let mut y: u32 = 5;
+
+    y = x;
+    
+    let z = 10; // 这里 z 的类型是? 
+}

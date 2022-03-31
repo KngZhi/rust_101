@@ -1,20 +1,14 @@
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
+use std::ops;
+
+// 实现 fn multiply 方法
+// 如上所述，`+` 需要 `T` 类型实现 `std::ops::Add` 特征
+// 那么, `*` 运算符需要实现什么特征呢? 你可以在这里找到答案: https://doc.rust-lang.org/core/ops/
+fn multipl
+
 fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
+    assert_eq!(6, multiply(2u8, 3u8));
+    assert_eq!(5.0, multiply(1.0, 5.0));
 
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
-} 
-
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
-    }
+    println!("Success!")
 }

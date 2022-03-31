@@ -1,18 +1,9 @@
-
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// 使用两种方法让代码工作起来
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
+   let v = {
+       let mut x = 1;
+       x += 2
+   };
 
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
-} 
+   assert_eq!(v, 3);
+}

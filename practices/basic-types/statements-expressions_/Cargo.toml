@@ -1,5 +1,5 @@
 [package]
-name = "./basic-types/statements-expressions_"
+name = "statements-expressions_"
 version = "0.1.0"
 edition = "2021"
 

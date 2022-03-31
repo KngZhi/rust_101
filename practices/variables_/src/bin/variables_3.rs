@@ -1,24 +1,10 @@
 
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// 修复下面代码的错误并使用尽可能少的改变
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
-
-    for msg in msgs {
-        show_message(msg)
+    let x: i32 = 10;
+    {
+        let y: i32 = 5;
+        println!("x 的值是 {}, y 的值是 {}", x, y);
     }
-} 
-
-fn show_message(msg: Message) {
-    println!("{}", msg);
+    println!("x 的值是 {}, y 的值是 {}", x, y); 
 }

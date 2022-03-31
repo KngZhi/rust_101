@@ -1,5 +1,5 @@
 [package]
-name = "./pattern-match/match-iflet_"
+name = "match-iflet_"
 version = "0.1.0"
 edition = "2021"
 

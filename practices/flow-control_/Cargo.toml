@@ -1,5 +1,5 @@
 [package]
-name = "./flow-control_"
+name = "flow-control_"
 version = "0.1.0"
 edition = "2021"
 

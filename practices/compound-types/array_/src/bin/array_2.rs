@@ -1,18 +1,11 @@
 
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
-
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
-} 
+    // 很多时候，我们可以忽略数组的部分类型，也可以忽略全部类型，让编译器帮助我们推导
+    let arr0 = [1, 2, 3];
+    let arr: [_; 3] = ['a', 'b', 'c'];
+    
+    // 填空
+    // 数组分配在栈上， `std::mem::size_of_val` 函数会返回整个数组占用的内存空间
+    // 数组中的每个 char 元素占用 4 字节的内存空间，因为在 Rust 中， char 是 Unicode 字符
+    assert!(std::mem::size_of_val(&arr) == __);
+}

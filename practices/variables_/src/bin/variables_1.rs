@@ -1,13 +1,7 @@
 
-// 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// 修复下面代码的错误并尽可能少的修改
 fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
-} 
+    let x: i32; // 未初始化，但被使用
+    let y: i32; // 未初始化，也未被使用
+    println!("{} is equal to 5", x); 
+}

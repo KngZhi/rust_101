@@ -1,5 +1,5 @@
 [package]
-name = "./variables_"
+name = "variables_"
 version = "0.1.0"
 edition = "2021"
 

@@ -1,20 +1,19 @@
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
+// 填空并修复错误，不要增加或移除代码行
+struct Person {
+    name: String,
+    age: u8,
+}
 fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
+    let age = 18;
+    let mut p = Person {
+        name: String::from("sunface"),
+        age,
+    };
 
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
-} 
+    // how can you believe sunface is only 18? 
+    p.age = 30;
 
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
-    }
+    // 填空
+    p.name = String::from("sunfei");
 }

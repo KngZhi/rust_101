@@ -1,5 +1,5 @@
 [package]
-name = "./pattern-match/patterns_"
+name = "patterns_"
 version = "0.1.0"
 edition = "2021"
 

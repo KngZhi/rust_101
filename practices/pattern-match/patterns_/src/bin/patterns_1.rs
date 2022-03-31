@@ -1,13 +1,17 @@
 
-// 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+fn main() {}
+fn match_number(n: i32) {
+    match n {
+        // 匹配一个单独的值
+        1 => println!("One!"),
+        // 使用 `|` 填空，不要使用 `..` 或 `..=`
+        __ => println!("match 2 -> 5"),
+        // 匹配一个闭区间的数值序列
+        6..=10 => {
+            println!("match 6 -> 10")
+        },
+        _ => {
+            println!("match 11 -> +infinite")
+        }
+    }
 }
-
-fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
-} 

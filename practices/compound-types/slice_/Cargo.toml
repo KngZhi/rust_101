@@ -1,5 +1,5 @@
 [package]
-name = "./compound-types/slice_"
+name = "slice_"
 version = "0.1.0"
 edition = "2021"
 

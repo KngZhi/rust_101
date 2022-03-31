@@ -1,18 +1,17 @@
 
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+struct Point {
+    x: i32,
+    y: i32,
 }
 
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
+    // 填空，让 p 匹配第二个分支
+    let p = Point { x: __, y: __ };
 
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
+    match p {
+        Point { x, y: 0 } => println!("On the x axis at {}", x),
+        // 第二个分支
+        Point { x: 0..=5, y: [email protected] (10 | 20 | 30) } => println!("On the y axis at {}", y),
+        Point { x, y } => println!("On neither axis: ({}, {})", x, y),
     }
-} 
+}

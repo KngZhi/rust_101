@@ -1,20 +1,20 @@
+// TryFrom 和 TryInto 也被包含在 `std::prelude` 中, 因此以下引入是没必要的
+// use std::convert::TryInto;
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
 fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
+    let n: i16 = 256;
 
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
-} 
+    // Into 特征拥有一个方法`into`,
+    // 因此 TryInto 有一个方法是 ?
+    let n: u8 = match n.__() {
+        Ok(n) => n,
+        Err(e) => {
+            println!("there is an error when converting: {:?}, but we catch it", e.to_string());
+            0
+        }
+    };
 
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
-    }
+    assert_eq!(n, __);
+
+    println!("Success!")
 }

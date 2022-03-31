@@ -1,18 +1,12 @@
+// 不要修改 main 中的代码
+fn main() {
+    let s1 = String::from("hello, world");
+    let s2 = take_ownership(s1);
 
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+    println!("{}", s2);
 }
 
-fn main() {
-    let msg = Message::Move{x: 1, y: 2};
-
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
-} 
+// 只能修改下面的代码!
+fn take_ownership(s: String) {
+    println!("{}", s);
+}

@@ -1,18 +1,23 @@
 
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+// From 被包含在 `std::prelude` 中，因此我们没必要手动将其引入到当前作用域来
+// use std::convert::From;
+
+#[derive(Debug)]
+struct Number {
+    value: i32,
 }
 
-fn main() {
-    let msg = Message::Move{x: 1, y: 2};
+impl From<i32> for Number {
+    // 实现 `from` 方法
+}
 
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
-} 
+// 填空
+fn main() {
+    let num = __(30);
+    assert_eq!(num.value, 30);
+
+    let num: Number = __;
+    assert_eq!(num.value, 30);
+
+    println!("Success!")
+}

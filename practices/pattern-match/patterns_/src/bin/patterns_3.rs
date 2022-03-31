@@ -1,24 +1,19 @@
 
-// 填空，并修复错误
+// 修复错误
 enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+    Hello { id: i32 },
 }
 
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
+    let msg = Message::Hello { id: 5 };
 
-    for msg in msgs {
-        show_message(msg)
+    match msg {
+        Message::Hello {
+            id:  3..=7,
+        } => println!("id 值的范围在 [3, 7] 之间: {}", id),
+        Message::Hello { id: [email protected] | 11 | 12 } => {
+            println!("id 值的范围在 [10, 12] 之间: {}", newid)
+        }
+        Message::Hello { id } => println!("Found some other id: {}", id),
     }
-} 
-
-fn show_message(msg: Message) {
-    println!("{}", msg);
 }

@@ -1,18 +1,15 @@
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
 
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+impl Rectangle {
+    // 完成 area 方法，返回矩形 Rectangle 的面积
+    fn area
 }
 
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
+    let rect1 = Rectangle { width: 30, height: 50 };
 
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
-} 
+    assert_eq!(rect1.area(), 1500);
+}

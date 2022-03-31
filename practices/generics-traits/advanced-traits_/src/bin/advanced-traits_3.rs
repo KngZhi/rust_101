@@ -1,24 +1,43 @@
+trait UsernameWidget {
+    fn get(&self) -> String;
+}
 
-// 填空，并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
+trait AgeWidget {
+    fn get(&self) -> u8;
+}
+
+struct Form {
+    username: String,
+    age: u8,
+}
+
+impl UsernameWidget for Form {
+    fn get(&self) -> String {
+        self.username.clone()
+    }
+}
+
+impl AgeWidget for Form {
+    fn get(&self) -> u8 {
+        self.age
+    }
 }
 
 fn main() {
-    let msgs: __ = [
-        Message::Quit,
-        Message::Move{x:1, y:3},
-        Message::ChangeColor(255,255,0)
-    ];
+    let form = Form{
+        username: "rustacean".to_owned(),
+        age: 28,
+    };
 
-    for msg in msgs {
-        show_message(msg)
-    }
-} 
+    // 如果你反注释下面一行代码，将看到一个错误: Fully Qualified Syntax
+    // 毕竟，这里有好几个同名的 `get` 方法
+    // 
+    // println!("{}", form.get());
+    
+    let username = UsernameWidget::get(&form);
+    assert_eq!("rustacean".to_owned(), username);
+    let age = AgeWidget::get(&form); // 你还可以使用以下语法 `<Form as AgeWidget>::get`
+    assert_eq!(28, age);
 
-fn show_message(msg: Message) {
-    println!("{}", msg);
+    println!("Success!")
 }

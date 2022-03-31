@@ -1,20 +1,18 @@
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
+// 修复错误，不要新增或删除代码行
 fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
-
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
-} 
-
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
+    let names = [String::from("liming"),String::from("hanmeimei")];
+    for name in names {
+        // do something with name...
     }
-}
+
+    println!("{:?}", names);
+
+    let numbers = [1, 2, 3];
+    // numbers中的元素实现了 Copy，因此无需转移所有权
+    for n in numbers {
+        // do something with name...
+    }
+    
+    println!("{:?}", numbers);
+} 

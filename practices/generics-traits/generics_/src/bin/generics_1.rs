@@ -1,13 +1,26 @@
 
 // 填空
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
+struct A;          // 具体的类型 `A`.
+struct S(A);       // 具体的类型 `S`.
+struct SGen<T>(T); // 泛型 `SGen`.
+
+fn reg_fn(_s: S) {}
+
+fn gen_spec_t(_s: SGen<A>) {}
+
+fn gen_spec_i32(_s: SGen<i32>) {}
+
+fn generic<T>(_s: SGen<T>) {}
 
 fn main() {
-    let msg1 = Message::Move{__}; // 使用x = 1, y = 2 来初始化
-    let msg2 = Message::Write(__); // 使用 "hello, world!" 来初始化
-} 
+    // 使用非泛型函数
+    reg_fn(__);          // 具体的类型
+    gen_spec_t(__);   // 隐式地指定类型参数  `A`.
+    gen_spec_i32(__); // 隐式地指定类型参数`i32`.
+
+    // 显式地指定类型参数 `char`
+    generic::<char>(__);
+
+    // 隐式地指定类型参数 `char`.
+    generic(__);
+}

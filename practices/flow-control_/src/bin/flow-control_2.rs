@@ -1,18 +1,18 @@
 
-// 仅填空并修复错误
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(i32, i32, i32),
-}
-
+// 修复错误
 fn main() {
-    let msg = Message::Move{x: 1, y: 2};
+    let n = 5;
 
-    if let Message::Move{__} = msg {
-        assert_eq!(a, b);
-    } else {
-        panic!("不要让这行代码运行！");
-    }
+    let big_n =
+        if n < 10 && n > -10 {
+            println!(" 数字太小，先增加 10 倍再说");
+
+            10 * n
+        } else {
+            println!("数字太大，我们得让它减半");
+
+            n / 2.0 ;
+        }
+
+    println!("{} -> {}", n, big_n);
 } 

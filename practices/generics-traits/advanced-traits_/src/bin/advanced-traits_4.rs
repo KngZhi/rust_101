@@ -1,20 +1,38 @@
+trait Pilot {
+    fn fly(&self) -> String;
+}
 
-// 填空让 `println` 输出，同时添加一些代码不要让最后一行的 `panic` 执行到
-fn main() {
-    let five = Some(5);
-    let six = plus_one(five);
-    let none = plus_one(None);
+trait Wizard {
+    fn fly(&self) -> String;
+}
 
-    if let __ = six {
-        println!("{}", n)
-    } 
-        
-    panic!("不要让这行代码运行！");
-} 
+struct Human;
 
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        __ => None,
-        __ => Some(i + 1),
+impl Pilot for Human {
+    fn fly(&self) -> String {
+        String::from("This is your captain speaking.")
     }
+}
+
+impl Wizard for Human {
+    fn fly(&self) -> String {
+        String::from("Up!")
+    }
+}
+
+impl Human {
+    fn fly(&self) -> String {
+        String::from("*waving arms furiously*")
+    }
+}
+
+fn main() {
+    let person = Human;
+
+    assert_eq!(__, "This is your captain speaking.");
+    assert_eq!(__, "Up!");
+
+    assert_eq!(__, "*waving arms furiously*");
+
+    println!("Success!")
 }
