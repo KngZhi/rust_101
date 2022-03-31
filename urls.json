@@ -1,0 +1,334 @@
+[
+        [
+            "1. 关于 pracitce.rs",
+            "https://zh.practice.rs/why-exercise.html"
+        ],
+        [
+            "2. 值得学习的小型项目",
+            "https://zh.practice.rs/elegant-code-base.html"
+        ],
+        [
+            "3. 变量绑定与解构",
+            "https://zh.practice.rs/variables.html"
+        ],
+        [
+            "4. 基本类型",
+            "https://zh.practice.rs/basic-types/intro.html"
+        ],
+        [
+            "4.1. 数值类型",
+            "https://zh.practice.rs/basic-types/numbers.html"
+        ],
+        [
+            "4.2. 字符、布尔、单元类型",
+            "https://zh.practice.rs/basic-types/char-bool-unit.html"
+        ],
+        [
+            "4.3. 语句与表达式",
+            "https://zh.practice.rs/basic-types/statements-expressions.html"
+        ],
+        [
+            "4.4. 函数",
+            "https://zh.practice.rs/basic-types/functions.html"
+        ],
+        [
+            "5. 所有权和借用",
+            "https://zh.practice.rs/ownership/intro.html"
+        ],
+        [
+            "5.1. 所有权",
+            "https://zh.practice.rs/ownership/ownership.html"
+        ],
+        [
+            "5.2. 引用和借用",
+            "https://zh.practice.rs/ownership/borrowing.html"
+        ],
+        [
+            "6. 复合类型",
+            "https://zh.practice.rs/compound-types/intro.html"
+        ],
+        [
+            "6.1. 字符串",
+            "https://zh.practice.rs/compound-types/string.html"
+        ],
+        [
+            "6.2. 数组",
+            "https://zh.practice.rs/compound-types/array.html"
+        ],
+        [
+            "6.3. 切片",
+            "https://zh.practice.rs/compound-types/slice.html"
+        ],
+        [
+            "6.4. 元组",
+            "https://zh.practice.rs/compound-types/tuple.html"
+        ],
+        [
+            "6.5. 结构体",
+            "https://zh.practice.rs/compound-types/struct.html"
+        ],
+        [
+            "6.6. 枚举",
+            "https://zh.practice.rs/compound-types/enum.html"
+        ],
+        [
+            "7. 流程控制",
+            "https://zh.practice.rs/flow-control.html"
+        ],
+        [
+            "8. 模式匹配",
+            "https://zh.practice.rs/pattern-match/intro.html"
+        ],
+        [
+            "8.1. match, matches! 和 if let",
+            "https://zh.practice.rs/pattern-match/match-iflet.html"
+        ],
+        [
+            "8.2. 模式",
+            "https://zh.practice.rs/pattern-match/patterns.html"
+        ],
+        [
+            "9. 方法和关联函数",
+            "https://zh.practice.rs/method.html"
+        ],
+        [
+            "10. 泛型和特征",
+            "https://zh.practice.rs/generics-traits/intro.html"
+        ],
+        [
+            "10.1. 泛型",
+            "https://zh.practice.rs/generics-traits/generics.html"
+        ],
+        [
+            "10.2. Const 泛型",
+            "https://zh.practice.rs/generics-traits/const-generics.html"
+        ],
+        [
+            "10.3. 特征 Traits",
+            "https://zh.practice.rs/generics-traits/traits.html"
+        ],
+        [
+            "10.4. 特征对象",
+            "https://zh.practice.rs/generics-traits/trait-object.html"
+        ],
+        [
+            "10.5. 进一步深入特征",
+            "https://zh.practice.rs/generics-traits/advanced-traits.html"
+        ],
+        [
+            "11. 集合类型",
+            "https://zh.practice.rs/collections/intro.html"
+        ],
+        [
+            "11.1. 动态字符串 String",
+            "https://zh.practice.rs/collections/String.html"
+        ],
+        [
+            "11.2. 动态数组 Vector",
+            "https://zh.practice.rs/collections/vector.html"
+        ],
+        [
+            "11.3. KV 存储 HashMap",
+            "https://zh.practice.rs/collections/hashmap.html"
+        ],
+        [
+            "12. 类型转换",
+            "https://zh.practice.rs/type-conversions/intro.html"
+        ],
+        [
+            "12.1. as",
+            "https://zh.practice.rs/type-conversions/as.html"
+        ],
+        [
+            "12.2. From/Into",
+            "https://zh.practice.rs/type-conversions/from-into.html"
+        ],
+        [
+            "12.3. 其它转换",
+            "https://zh.practice.rs/type-conversions/others.html"
+        ],
+        [
+            "13. 返回值和 panic!",
+            "https://zh.practice.rs/result-panic/intro.html"
+        ],
+        [
+            "13.1. panic! 深入剖析",
+            "https://zh.practice.rs/result-panic/panic.html"
+        ],
+        [
+            "13.2. 返回值result 和 ?",
+            "https://zh.practice.rs/result-panic/result.html"
+        ],
+        [
+            "14. 包和模块",
+            "https://zh.practice.rs/crate-module/intro.html"
+        ],
+        [
+            "14.1. 包 Crate",
+            "https://zh.practice.rs/crate-module/crate.html"
+        ],
+        [
+            "14.2. 模块 Module",
+            "https://zh.practice.rs/crate-module/module.html"
+        ],
+        [
+            "14.3. 使用use引入模块及受限可见性",
+            "https://zh.practice.rs/crate-module/use-pub.html"
+        ],
+        [
+            "15. 注释和文档",
+            "https://zh.practice.rs/comments-docs.html"
+        ],
+        [
+            "16. 格式化输出 todo",
+            "https://zh.practice.rs/formatted-output.html"
+        ],
+        [
+            "17. 生命周期 todo",
+            "https://zh.practice.rs/lifetime/intro.html"
+        ],
+        [
+            "17.1. 生命周期基础",
+            "https://zh.practice.rs/lifetime/basic.html"
+        ],
+        [
+            "17.2. &'static 和 T: 'static",
+            "https://zh.practice.rs/lifetime/static.html"
+        ],
+        [
+            "17.3. 深入生命周期",
+            "https://zh.practice.rs/lifetime/advance.html"
+        ],
+        [
+            "18. 函数式编程: 闭包、迭代器 todo",
+            "https://zh.practice.rs/functional-programing/intro.html"
+        ],
+        [
+            "18.1. 闭包 Closure",
+            "https://zh.practice.rs/functional-programing/cloure.html"
+        ],
+        [
+            "18.2. 迭代器 Iterator",
+            "https://zh.practice.rs/functional-programing/iterator.html"
+        ],
+        [
+            "19. newtype 和 Sized todo",
+            "https://zh.practice.rs/newtype-sized.html"
+        ],
+        [
+            "20. 智能指针 todo",
+            "https://zh.practice.rs/smart-pointers/intro.html"
+        ],
+        [
+            "20.1. Box",
+            "https://zh.practice.rs/smart-pointers/box.html"
+        ],
+        [
+            "20.2. Deref",
+            "https://zh.practice.rs/smart-pointers/deref.html"
+        ],
+        [
+            "20.3. Drop",
+            "https://zh.practice.rs/smart-pointers/drop.html"
+        ],
+        [
+            "20.4. Rc and Arc",
+            "https://zh.practice.rs/smart-pointers/rc-arc.html"
+        ],
+        [
+            "20.5. Cell and RefCell",
+            "https://zh.practice.rs/smart-pointers/cell-refcell.html"
+        ],
+        [
+            "21. Weak 和循环引用todo",
+            "https://zh.practice.rs/weak.html"
+        ],
+        [
+            "22. 自引用 todo",
+            "https://zh.practice.rs/self-referential.html"
+        ],
+        [
+            "23. 多线程 todo",
+            "https://zh.practice.rs/threads/intro.html"
+        ],
+        [
+            "23.1. 多线程基础",
+            "https://zh.practice.rs/threads/basic-using.html"
+        ],
+        [
+            "23.2. 消息传递",
+            "https://zh.practice.rs/threads/message-passing.html"
+        ],
+        [
+            "23.3. 线程同步：锁、Condvar和信号量",
+            "https://zh.practice.rs/threads/sync.html"
+        ],
+        [
+            "23.4. 线程同步：Atomic",
+            "https://zh.practice.rs/threads/atomic.html"
+        ],
+        [
+            "23.5. Send 和 Sync",
+            "https://zh.practice.rs/threads/send-sync.html"
+        ],
+        [
+            "24. 全局变量 todo",
+            "https://zh.practice.rs/global-variables.html"
+        ],
+        [
+            "25. 错误处理 todo",
+            "https://zh.practice.rs/errors.html"
+        ],
+        [
+            "26. Unsafe doing",
+            "https://zh.practice.rs/unsafe/intro.html"
+        ],
+        [
+            "26.1. 内联汇编",
+            "https://zh.practice.rs/unsafe/inline-asm.html"
+        ],
+        [
+            "27. macro 宏 todo",
+            "https://zh.practice.rs/macro.html"
+        ],
+        [
+            "28. 测试 todo",
+            "https://zh.practice.rs/tests/intro.html"
+        ],
+        [
+            "28.1. 编写测试及控制执行",
+            "https://zh.practice.rs/tests/write-tests.html"
+        ],
+        [
+            "28.2. 基准性能测试 Benchmark",
+            "https://zh.practice.rs/tests/benchmark.html"
+        ],
+        [
+            "28.3. 单元测试及集成测试",
+            "https://zh.practice.rs/tests/unit-integration.html"
+        ],
+        [
+            "28.4. 断言 Assertions",
+            "https://zh.practice.rs/tests/assertions.html"
+        ],
+        [
+            "29. Async/Await 异步编程 todo",
+            "https://zh.practice.rs/async/intro.html"
+        ],
+        [
+            "29.1. async 和 await!",
+            "https://zh.practice.rs/async/async-await.html"
+        ],
+        [
+            "29.2. Future",
+            "https://zh.practice.rs/async/future.html"
+        ],
+        [
+            "29.3. Pin 和 Unpin",
+            "https://zh.practice.rs/async/pin-unpin.html"
+        ],
+        [
+            "29.4. Stream 流处理",
+            "https://zh.practice.rs/async/stream.html"
+        ]
+]

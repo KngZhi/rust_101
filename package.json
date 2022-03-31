@@ -1,0 +1,13 @@
+{
+  "name": "rust-101",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:KngZhi/rust_101.git",
+  "author": "KoKo <kngzhi@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^3.2.3",
+    "cheerio": "^1.0.0-rc.10",
+    "node-fetch": "2"
+  }
+}
