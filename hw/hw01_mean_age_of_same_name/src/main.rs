@@ -4,6 +4,7 @@ use std::env;
 use std::fs;
 
 
+#[derive(Debug)]
 struct Person {
     id: String,
     name: String,
@@ -16,7 +17,13 @@ fn csv_to_persons(csv: String) -> Vec<Person> {
         .map(|line| {
             let parts: Vec<&str> = line.split(',').collect();
 
-            Person { id: parts[0].to_string(), name: parts[1].to_string(), age: parts[2].to_string() }
+            let p = Person {
+                id: parts[0].to_string(),
+                name: parts[1].to_string(),
+                age: parts[2].to_string()
+            };
+
+            p
         })
         .collect();
 
