@@ -1,6 +1,6 @@
 
 fn main() {
-    let raw_str = r"Escapes don't work here: \x3F \u{211D}";
+    let raw_str = "Escapes don't work here: \x3F \u{211D}";
     // 修改以下代码行，让它工作
     assert_eq!(raw_str, "Escapes don't work here: ? ℝ");
 
@@ -13,6 +13,6 @@ fn main() {
     println!("{}", delimiter);
 
     // 填空
-    let long_delimiter = __;
+    let long_delimiter = r###"Hello, "##""###;
     assert_eq!(long_delimiter, "Hello, \"##\"")
 }
