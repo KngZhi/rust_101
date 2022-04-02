@@ -11,8 +11,8 @@ fn main() {
         } else {
             println!("数字太大，我们得让它减半");
 
-            n / 2.0 ;
-        }
+            n / 2
+        };
 
     println!("{} -> {}", n, big_n);
-} 
+}

@@ -5,7 +5,7 @@ fn main() {
     let mut n = 1;
 
     // 当条件为真时，不停的循环
-    while n __ 10 {
+    while n < 10 {
         if n % 15 == 0 {
             println!("fizzbuzz");
         } else if n % 3 == 0 {
@@ -17,7 +17,7 @@ fn main() {
         }
 
 
-        __;
+        n += 1;
     }
 
     println!("n 的值是 {}, 循环结束",n);

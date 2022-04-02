@@ -7,7 +7,7 @@ fn main() {
         counter += 1;
 
         if counter == 10 {
-            __;
+            break counter * 2;
         }
     };
 

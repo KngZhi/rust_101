@@ -5,9 +5,9 @@ fn main() {
 
     if n < 0 {
         println!("{} is negative", n);
-    } __ n > 0 {
+    } else if n > 0 {
         println!("{} is positive", n);
-    } __ {
+    } else {
         println!("{} is zero", n);
     }
 } 

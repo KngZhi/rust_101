@@ -13,7 +13,7 @@ fn main() {
             println!("three");
 
             // 跳过当此循环的剩余代码
-            __;
+            continue;
         }
 
         println!("{}", count);
@@ -21,7 +21,7 @@ fn main() {
         if count == 5 {
             println!("OK, that's enough");
 
-            __;
+            break
         }
     }
 
