@@ -1,5 +1,6 @@
 
 // 填空，并修复错误
+#[derive(Debug)]
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -8,7 +9,7 @@ enum Message {
 }
 
 fn main() {
-    let msgs: __ = [
+    let msgs: [Message; 3] = [
         Message::Quit,
         Message::Move{x:1, y:3},
         Message::ChangeColor(255,255,0)
@@ -17,8 +18,8 @@ fn main() {
     for msg in msgs {
         show_message(msg)
     }
-} 
+}
 
 fn show_message(msg: Message) {
-    println!("{}", msg);
+    println!("{:?}", msg);
 }

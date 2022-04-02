@@ -19,7 +19,7 @@ impl List {
     }
 
     // 在老的链表前面新增一个节点，并返回新的链表
-    fn prepend(self, elem: u32) -> __ {
+    fn prepend(self, elem: u32) -> List {
         Cons(elem, Box::new(self))
     }
 
@@ -27,7 +27,7 @@ impl List {
     fn len(&self) -> u32 {
         match *self {
             // 这里我们不能拿走 tail 的所有权，因此需要获取它的引用
-            Cons(_, __ tail) => 1 + tail.len(),
+            Cons(_, ref tail) => 1 + tail.len(),
             // 空链表的长度为 0
             Nil => 0
         }
@@ -38,7 +38,7 @@ impl List {
         match *self {
             Cons(head, ref tail) => {
                 // 递归生成字符串
-                format!("{}, {}", head, tail.__())
+                format!("{}, {}", head, tail.stringify())
             },
             Nil => {
                 format!("Nil")
