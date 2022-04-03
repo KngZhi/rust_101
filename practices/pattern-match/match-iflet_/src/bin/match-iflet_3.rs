@@ -21,14 +21,14 @@ fn main() {
 
 fn show_message(msg: Message) {
     match msg {
-        __ => { // 这里匹配 Message::Move
+        Message::Move{ x: a, y: b } => { // 这里匹配 Message::Move
             assert_eq!(a, 1);
             assert_eq!(b, 3);
         },
         Message::ChangeColor(_, g, b) => {
-            assert_eq!(g, __);
-            assert_eq!(b, __);
+            assert_eq!(g, 255)
+            assert_eq!(b, 0);
         }
-        __ => println!("no data in these variants")
+        _ => println!("no data in these variants")
     }
 }

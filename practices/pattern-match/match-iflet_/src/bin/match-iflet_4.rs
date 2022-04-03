@@ -4,6 +4,6 @@ fn main() {
 
     // 使用 `matches` 填空
     for ab in alphabets {
-        assert!(__)
+        assert!(matches!(ab, 'a'..='z' | 'A'..='Z' | '0' | '9'))
     }
 } 

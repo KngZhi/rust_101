@@ -9,7 +9,7 @@ fn main() {
 
     let v = vec![MyEnum::Foo,MyEnum::Bar,MyEnum::Foo];
     for e in v {
-        if e == MyEnum::Foo { // 修复错误，只能修改本行代码
+        if matches!(e, MyEnum::Foo) { // 修复错误，只能修改本行代码
             count += 1;
         }
     }
