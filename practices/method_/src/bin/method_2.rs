@@ -5,7 +5,9 @@ struct Rectangle {
 
 impl Rectangle {
     // 完成 area 方法，返回矩形 Rectangle 的面积
-    fn area
+    fn area (&self) -> u32 {
+        &self.width * &self.height
+    }
 }
 
 fn main() {

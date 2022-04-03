@@ -7,7 +7,11 @@ impl TrafficLight {
     // 1. 实现下面的关联函数 `new`,
     // 2. 该函数返回一个 TrafficLight 实例，包含 `color` "red"
     // 3. 该函数必须使用 `Self` 作为类型，不能在签名或者函数体中使用 `TrafficLight`
-    pub fn new() 
+    pub fn new() -> Self {
+        TrafficLight {
+            color: "red".to_string()
+        }
+    }
 
     pub fn get_state(&self) -> &str {
         &self.color

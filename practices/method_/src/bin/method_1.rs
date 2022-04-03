@@ -88,7 +88,7 @@ fn main() {
 
 
     // 错误！`rectangle` 是不可变的，但是这个方法要求一个可变的对象
-    //rectangle.translate(1.0, 0.0);
+    // rectangle.translate(1.0, 0.0);
     // TODO ^ 试着反注释此行，看看会发生什么
 
     // 可以！可变对象可以调用可变的方法
@@ -99,6 +99,6 @@ fn main() {
     pair.destroy();
 
     // Error! 上一个 `destroy` 调用拿走了 `pair` 的所有权
-    //pair.destroy();
+    // pair.destroy();
     // TODO ^ 试着反注释此行
 }

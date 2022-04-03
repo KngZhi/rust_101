@@ -5,8 +5,8 @@ struct TrafficLight {
 }
 
 impl TrafficLight {
-    pub fn show_state(__)  {
-        println!("the current state is {}", __.color);
+    pub fn show_state(&self)  {
+        println!("the current state is {}", &self.color);
     }
 }
 fn main() {
