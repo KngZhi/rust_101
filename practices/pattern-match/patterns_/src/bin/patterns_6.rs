@@ -6,6 +6,6 @@ fn main() {
     let r = &mut v;
 
     match r {
-       &mut value => value.push_str(" world!") 
+       value => value.push_str(" world!")
     }
 }
