@@ -1,4 +1,3 @@
-
 #[derive(Debug)]
 enum TrafficLightColor {
     Red,
@@ -21,8 +20,14 @@ fn main() {
     let c = TrafficLightColor::Yellow;
 
     assert_eq!(c.color(), "yellow");
-    // ！！！不同的类型为什么也是相同的，底层是啥？
+    // XXX:String 和 &str 可以进行相等比较
     assert_eq!("yellow".to_string(), "yellow");
+    // XXX: `==` 的实现原理也是通过 `partialEq` 嘛？
+    assert!("yellow".to_string() == "yellow");
+    if "yellow".to_string() == "yellow" {
+        print!("hello world")
+        "a".to_owned()
+    }
 
-    println!("{:?}",c);
+    println!("{:?}", c);
 }

@@ -5,12 +5,12 @@ struct TrafficLight {
 }
 
 impl TrafficLight {
-    pub fn show_state(&self)  {
+    pub fn show_state(&self) {
         println!("the current state is {}", &self.color);
     }
 }
 fn main() {
-    let light = TrafficLight{
+    let light = TrafficLight {
         color: "red".to_owned(),
     };
     // 不要拿走 `light` 的所有权

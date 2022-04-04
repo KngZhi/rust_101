@@ -30,7 +30,6 @@ impl Rectangle {
         let Point { x: x1, y: y1 } = self.p1;
         let Point { x: x2, y: y2 } = self.p2;
 
-  
         // `abs` 是一个 `f64` 类型的方法，会返回调用者的绝对值
         ((x1 - x2) * (y1 - y2)).abs()
     }
@@ -85,7 +84,6 @@ fn main() {
         p1: Point::origin(),
         p2: Point::new(1.0, 1.0),
     };
-
 
     // 错误！`rectangle` 是不可变的，但是这个方法要求一个可变的对象
     // rectangle.translate(1.0, 0.0);

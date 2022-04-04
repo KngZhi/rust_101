@@ -9,7 +9,7 @@ impl TrafficLight {
     // 3. 该函数必须使用 `Self` 作为类型，不能在签名或者函数体中使用 `TrafficLight`
     pub fn new() -> Self {
         TrafficLight {
-            color: "red".to_string()
+            color: "red".to_string(),
         }
     }
 
