@@ -20,11 +20,11 @@ impl Animal for Cow {
 
 // 返回一个类型，该类型实现了 Animal 特征，但是我们并不能在编译期获知具体返回了哪个类型
 // 修复这里的错误，你可以使用虚假的随机，也可以使用特征对象
-fn random_animal(random_number: f64) -> impl Animal {
+fn random_animal(random_number: f64) -> Box<dyn Animal> {
     if random_number < 0.5 {
-        Sheep {}
+        Box::new(Sheep {})
     } else {
-        Cow {}
+        Box::new(Cow {})
     }
 }
 

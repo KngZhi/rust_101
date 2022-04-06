@@ -1,4 +1,5 @@
 // 修复代码中的错误
+#[derive(Debug)]
 struct Pair<T> {
     x: T,
     y: T,
@@ -23,6 +24,7 @@ impl<T: std::fmt::Debug + PartialOrd> Pair<T> {
     }
 }
 
+#[derive(Debug,PartialEq,PartialOrd)]
 struct Unit(i32);
 
 fn main() {

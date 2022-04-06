@@ -1,4 +1,3 @@
-
 struct Sheep { naked: bool, name: String }
 
 impl Sheep {

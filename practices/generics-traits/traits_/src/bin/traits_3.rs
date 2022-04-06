@@ -1,3 +1,6 @@
+// use std::ops;
+use std::cmp::Ordering;
+
 
 // `Centimeters`, 一个元组结构体，可以被比较大小
 #[derive(PartialEq, PartialOrd)]
@@ -17,7 +20,30 @@ impl Inches {
 
 // 添加一些属性让代码工作
 // 不要修改其它代码！
+#[derive(Debug,PartialEq,PartialOrd)]
 struct Seconds(i32);
+
+// impl PartialEq for Seconds {
+//     fn eq(&self, other: &Seconds) -> bool {
+//         let &Seconds(seconds) = self;
+//         let &Seconds(other_sec) = other;
+
+//         return seconds == other_sec
+//     }
+// }
+
+// impl PartialOrd for Seconds {
+//     fn partial_cmp(&self, _other: &Seconds) -> Option<Ordering> {
+//         Some(Ordering::Less)
+//     }
+
+//     fn gt(&self, other: &Seconds) -> bool {
+//         let &Seconds(seconds) = self;
+//         let &Seconds(other_sec) = other;
+
+//         return seconds > other_sec
+//     }
+// }
 
 fn main() {
     let _one_second = Seconds(1);

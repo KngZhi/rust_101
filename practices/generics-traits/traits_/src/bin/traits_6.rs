@@ -1,5 +1,4 @@
-
-// 实现 `fn summary` 
+// 实现 `fn summary`
 // 修复错误且不要移除任何代码行
 trait Summary {
     fn summarize(&self) -> String;
@@ -41,12 +40,14 @@ fn main() {
         content: "Weibo seems to be worse than Tweet".to_string(),
     };
 
-    summary(post);
-    summary(weibo);
+    summary(&post);
+    summary(&weibo);
 
     println!("{:?}", post);
     println!("{:?}", weibo);
 }
 
 // 在下面实现 `fn summary` 函数
-
+fn summary(s: &impl Summary) -> String {
+    s.summarize()
+}

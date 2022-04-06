@@ -5,8 +5,10 @@ use std::ops;
 struct Foo;
 struct Bar;
 
+#[derive(Debug,PartialEq)]
 struct FooBar;
 
+#[derive(Debug,PartialEq)]
 struct BarFoo;
 
 // 下面的代码实现了自定义类型的相加： Foo + Bar = FooBar
@@ -18,10 +20,10 @@ impl ops::Add<Bar> for Foo {
     }
 }
 
-impl ops::Sub<Foo> for Bar {
+impl ops::Sub<Bar> for Foo {
     type Output = BarFoo;
 
-    fn sub(self, _rhs: Foo) -> BarFoo {
+    fn sub(self, _rhs: Bar) -> BarFoo {
         BarFoo
     }
 }
