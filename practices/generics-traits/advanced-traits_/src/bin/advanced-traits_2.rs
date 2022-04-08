@@ -8,7 +8,29 @@ struct Point<T> {
 }
 
 // 用三种方法填空: 其中两种使用默认的泛型参数，另外一种不使用
-impl __ {
+// impl <T: Sub<Output = T>> Sub<Point<T>> for Point<i32> {
+//     type Output = Self;
+
+//     fn sub(self, other: Self) -> Self::Output {
+//         Point {
+//             x: self.x - other.x,
+//             y: self.y - other.y,
+//         }
+//     }
+// }
+
+// impl <T: Sub<Output = T>> Sub<Self> for Point<T> {
+//     type Output = Self;
+
+//     fn sub(self, other: Self) -> Self::Output {
+//         Point {
+//             x: self.x - other.x,
+//             y: self.y - other.y,
+//         }
+//     }
+// }
+
+impl <T: Sub<Output = T>> Sub for Point<T> {
     type Output = Self;
 
     fn sub(self, other: Self) -> Self::Output {

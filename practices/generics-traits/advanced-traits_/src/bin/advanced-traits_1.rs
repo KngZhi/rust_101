@@ -2,17 +2,19 @@
 struct Container(i32, i32);
 
 // 使用关联类型实现重新实现以下特征
-// trait Contains {
-//    type A;
-//    type B;
+trait Contains {
+   type A;
+   type B;
 
-trait Contains<A, B> {
-    fn contains(&self, _: &A, _: &B) -> bool;
-    fn first(&self) -> i32;
-    fn last(&self) -> i32;
+   fn contains(&self, _: &Self::A, _: &Self::B) -> bool;
+   fn first(&self) -> i32;
+   fn last(&self) -> i32;
 }
 
-impl Contains<i32, i32> for Container {
+impl Contains for Container {
+    type A = i32;
+    type B = i32;
+
     fn contains(&self, number_1: &i32, number_2: &i32) -> bool {
         (&self.0 == number_1) && (&self.1 == number_2)
     }
@@ -23,7 +25,7 @@ impl Contains<i32, i32> for Container {
     fn last(&self) -> i32 { self.1 }
 }
 
-fn difference<A, B, C: Contains<A, B>>(container: &C) -> i32 {
+fn difference<C: Contains>(container: &C) -> i32 {
     container.last() - container.first()
 }
 
