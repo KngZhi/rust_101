@@ -21,7 +21,7 @@ fn main() {
     let y = 8u8;
 
     // draw x
-    draw_with_box(__);
+    draw_with_box(Box::new(x));
 
     // draw y
     draw_with_ref(&y);
@@ -33,6 +33,6 @@ fn draw_with_box(x: Box<dyn Draw>) {
     x.draw();
 }
 
-fn draw_with_ref(x: __) {
+fn draw_with_ref(x: &dyn Draw) {
     x.draw();
 }

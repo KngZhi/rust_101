@@ -29,7 +29,10 @@ impl Bird for Swan {
 
 fn main() {
     // 填空
-    let birds __;
+    let birds: [Box<dyn Bird>; 2] = [
+        Box::new(Duck {}),
+        Box::new(Swan {}),
+    ];
 
     for bird in birds {
         bird.quack();

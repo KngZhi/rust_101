@@ -30,7 +30,7 @@ impl Bird for Swan {
 
 fn main() {
     // 填空
-    let duck = __;
+    let duck = Duck;
     duck.swim();
 
     let bird = hatch_a_bird(2);
@@ -46,8 +46,14 @@ fn main() {
     assert_eq!(bird.quack(), "swan swan");
 
     println!("Success!")
-}   
+}
 
 // 实现以下函数
-fn hatch_a_bird...
+fn hatch_a_bird(species: u8) -> Box<dyn Bird> {
+    if species == 1 {
+        Box::new(Swan)
+    } else {
+        Box::new(Duck)
+    }
+}
 

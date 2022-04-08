@@ -13,13 +13,13 @@ impl MyTrait for String {
     fn f(&self) -> Self { self.clone() }
 }
 
-fn my_function(x: Box<dyn MyTrait>)  {
+fn my_function(x: impl MyTrait) -> impl MyTrait {
     x.f()
 }
 
 fn main() {
-    my_function(Box::new(13_u32));
-    my_function(Box::new(String::from("abc")));
+    my_function(13_u32);
+    my_function(String::from("abc"));
 
     println!("Success!")
 }
