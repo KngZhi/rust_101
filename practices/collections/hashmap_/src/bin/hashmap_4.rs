@@ -3,6 +3,7 @@
 // 提示: `derive` 是实现一些常用特征的好办法
 use std::collections::HashMap;
 
+#[derive(Debug, PartialEq, Eq, Hash)]
 struct Viking {
     name: String,
     country: String,
@@ -19,7 +20,7 @@ impl Viking {
 
 fn main() {
     // 使用 HashMap 来存储 viking 的生命值
-    let vikings = HashMap::from([
+    let vikings: HashMap<Viking, u32> = HashMap::from([
         (Viking::new("Einar", "Norway"), 25),
         (Viking::new("Olaf", "Denmark"), 24),
         (Viking::new("Harald", "Iceland"), 12),

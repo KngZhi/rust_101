@@ -9,8 +9,9 @@ fn main() {
 
   let v2 = "hello".to_string();
   let mut m2 = HashMap::new();
+
   // 所有权在这里发生了转移
-  m2.insert(v2, v1);
+  m2.insert(&v2, v1);
 
   assert_eq!(v2, "hello");
 

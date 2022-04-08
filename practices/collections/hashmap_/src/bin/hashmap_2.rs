@@ -14,9 +14,12 @@ fn main() {
 
     // 使用两种方法实现 team_map2
     // 提示:其中一种方法是使用 `collect` 方法
-    let teams_map2...
+    let teams_map2 = teams.iter().copied().collect();
+
+    let teams_map3 = HashMap::from(teams);
 
     assert_eq!(teams_map1, teams_map2);
+    assert_eq!(teams_map1, teams_map3);
 
     println!("Success!")
 }

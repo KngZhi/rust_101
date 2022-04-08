@@ -8,16 +8,16 @@ fn main() {
     // 查询指定的 key, 若不存在时，则插入新的 kv 值
     player_stats.entry("health").or_insert(100);
 
-    assert_eq!(player_stats["health"], __);
+    assert_eq!(player_stats["health"], 100);
 
     // 通过函数来返回新的值
     player_stats.entry("health").or_insert_with(random_stat_buff);
-    assert_eq!(player_stats["health"], __);
+    assert_eq!(player_stats["health"], 100);
 
     let health = player_stats.entry("health").or_insert(50);
-    assert_eq!(health, __);
+    assert_eq!(*health, 100);
     *health -= 50;
-    assert_eq!(*health, __);
+    assert_eq!(*health, 50);
 
     println!("Success!")
 }
