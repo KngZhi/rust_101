@@ -6,7 +6,7 @@ fn main() {
     v1.push(3);
     
     let mut v2 = Vec::new();
-    v2.__;
+    v2.extend([1,2,3].iter().copied());
 
     assert_eq!(v1, v2);
 

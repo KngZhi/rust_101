@@ -17,7 +17,7 @@ impl IpAddr for V6 {
 
 fn main() {
     // 填空
-    let v: __= vec![
+    let v: Vec<Box<dyn IpAddr>>= vec![
         Box::new(V4("127.0.0.1".to_string())),
         Box::new(V6("::1".to_string())),
     ];
