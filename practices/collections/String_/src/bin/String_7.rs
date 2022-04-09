@@ -8,9 +8,9 @@ fn main() {
     // 阻止 String 的数据被自动 drop
     let mut story = mem::ManuallyDrop::new(story);
 
-    let ptr = story.__();
-    let len = story.__();
-    let capacity = story.__();
+    let ptr = story.as_mut_ptr();
+    let len = story.len();
+    let capacity = story.capacity();
 
     assert_eq!(16, len);
 

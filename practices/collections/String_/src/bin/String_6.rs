@@ -5,7 +5,7 @@
 // 25
 // 循环中不会发生任何内存分配
 fn main() {
-    let mut s = String::new();
+    let mut s = String::with_capacity(25);
 
     println!("{}", s.capacity());
 

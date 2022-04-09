@@ -3,11 +3,11 @@
 // 1. 不要使用 `to_string()`
 // 2. 不要添加/删除任何代码行
 fn main() {
-    let mut s: String = "hello, ";
-    s.push_str("world".to_string());
-    s.push(__);
+    let mut s: String = String::from("hello, ");
+    s.push_str("world");
+    s.push('!');
 
-    move_ownership(s);
+    move_ownership(s.clone());
 
     assert_eq!(s, "hello, world!");
 
