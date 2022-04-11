@@ -1,17 +1,18 @@
+#![allow(overflowing_literals)]
 fn main() {
-    assert_eq!(1000 as u16, __);
+    assert_eq!(1000 as u16, 1000);
 
-    assert_eq!(1000 as u8, __);
+    assert_eq!(1000 as u8, 232);
 
     // 事实上，之前说的规则对于正整数而言，就是如下的取模
     println!("1000 mod 256 is : {}", 1000 % 256);
 
-    assert_eq!(-1_i8 as u8, __);
+    assert_eq!(-1_i8 as u8, 255);
     
 
     // 从 Rust 1.45 开始，当浮点数超出目标整数的范围时，转化会直接取正整数取值范围的最大或最小值
-    assert_eq!(300.1_f32 as u8, __);
-    assert_eq!(-100.1_f32 as u8, __);
+    assert_eq!(300.1_f32 as u8, 255);
+    assert_eq!(-100.1_f32 as u8, 0);
     
 
     // 上面的浮点数转换有一点性能损耗，如果大家对于某段代码有极致的性能要求，

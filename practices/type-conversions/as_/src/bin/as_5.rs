@@ -4,6 +4,7 @@ fn main() {
     let a: *const [u64] = &arr;
     let b = a as *const [u8];
     unsafe {
-        assert_eq!(std::mem::size_of_val(&*b), __)
+        //TODO: do not know the reason
+        assert_eq!(std::mem::size_of_val(&*b), 13)
     }
 }

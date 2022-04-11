@@ -1,3 +1,4 @@
+#![allow(overflowing_literals)]
 fn main() {
     assert_eq!(u8::MAX, 255);
     // 如上所示，u8 类型允许的最大值是 255.
