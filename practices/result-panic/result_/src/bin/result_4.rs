@@ -2,7 +2,15 @@ use std::num::ParseIntError;
 
 // 使用两种方式填空: map, and then
 fn add_two(n_str: &str) -> Result<i32, ParseIntError> {
-   n_str.parse::<i32>().__
+    // Sol 1
+    // let val = n_str.parse::<i32>().unwrap() + 2;
+    // Ok(val)
+
+    // Sol2
+    // n_str.parse::<i32>().map(|x| x + 2)
+
+    // Sol3
+    n_str.parse::<i32>().and_then(|num| Ok(num + 2))
 }
 
 fn main() {

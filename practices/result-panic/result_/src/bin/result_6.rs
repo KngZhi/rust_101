@@ -1,7 +1,7 @@
-use std::num::ParseIntError;
+use std::{num::ParseIntError};
 
 // 填空
-type __;
+type Res<T> = Result<T, ParseIntError>;
 
 // 使用上面的别名来引用原来的 `Result` 类型
 fn multiply(first_number_str: &str, second_number_str: &str) -> Res<i32> {

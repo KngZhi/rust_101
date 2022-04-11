@@ -21,7 +21,7 @@ fn read_file1() -> Result<String, io::Error> {
 fn read_file2() -> Result<String, io::Error> {
     let mut s = String::new();
 
-    __;
+    File::open("hello.txt")?.read_to_string(&mut s);
 
     Ok(s)
 }
