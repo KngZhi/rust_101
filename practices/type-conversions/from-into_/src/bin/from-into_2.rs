@@ -9,14 +9,19 @@ struct Number {
 
 impl From<i32> for Number {
     // 实现 `from` 方法
+    fn from(value: i32) -> Self {
+        Self {
+            value
+        }
+    }
 }
 
 // 填空
 fn main() {
-    let num = __(30);
+    let num = Number::from(30);
     assert_eq!(num.value, 30);
 
-    let num: Number = __;
+    let num: Number = Number { value: 30 };
     assert_eq!(num.value, 30);
 
     println!("Success!")

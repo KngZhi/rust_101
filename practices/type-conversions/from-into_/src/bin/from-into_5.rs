@@ -20,9 +20,9 @@ fn main() {
 
     // 填空
     let result: Result<EvenNum, ()> = 8i32.try_into();
-    assert_eq!(result, __);
+    assert_eq!(result, Ok(EvenNum(8)));
     let result: Result<EvenNum, ()> = 5i32.try_into();
-    assert_eq!(result, __);
+    assert_eq!(result, Err(()));
 
     println!("Success!")
 }

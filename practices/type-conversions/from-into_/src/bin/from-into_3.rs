@@ -1,4 +1,3 @@
-
 use std::fs;
 use std::io;
 use std::num;
@@ -10,10 +9,16 @@ enum CliError {
 
 impl From<io::Error> for CliError {
     // 实现 from 方法
+    fn from(err: io::Error) -> Self {
+        Self::IoError(err)
+    }
 }
 
 impl From<num::ParseIntError> for CliError {
     // 实现 from 方法
+    fn from(err: num::ParseIntError) -> Self {
+        Self::ParseError(err)
+    }
 }
 
 fn open_and_parse_file(file_name: &str) -> Result<i32, CliError> {

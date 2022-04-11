@@ -6,7 +6,7 @@ fn main() {
 
     // Into 特征拥有一个方法`into`,
     // 因此 TryInto 有一个方法是 ?
-    let n: u8 = match n.__() {
+    let n: u8 = match n.try_into() {
         Ok(n) => n,
         Err(e) => {
             println!("there is an error when converting: {:?}, but we catch it", e.to_string());
@@ -14,7 +14,7 @@ fn main() {
         }
     };
 
-    assert_eq!(n, __);
+    assert_eq!(n, 0);
 
     println!("Success!")
 }
