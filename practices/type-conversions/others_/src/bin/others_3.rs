@@ -24,7 +24,8 @@ impl FromStr for Point {
 fn main() {
     // 使用两种方式填空
     // 不要修改其它地方的代码
-    let p = __;
+    // let p = Point::from_str("(3,4)");
+    let p = "(3,4)".parse::<Point>();
     assert_eq!(p.unwrap(), Point{ x: 3, y: 4} );
 
     println!("Success!")
